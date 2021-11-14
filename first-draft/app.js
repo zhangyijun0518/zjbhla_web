@@ -29,4 +29,4 @@ module.exports = app;
 // modelMain.readDataFromFile();
 // modelMain.summarizeData();
 
-app.listen(3000);
+app.listen(80);
