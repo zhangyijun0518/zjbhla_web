@@ -4,6 +4,11 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var index = require('./app_server/routes/index');
 var modelMain = require('./app_server/models/modelMain');
+
+var https = require('https');
+var http = require('http');
+var fs = require('fs');
+
 var app = express();
 
 // View engine setup
@@ -26,7 +31,19 @@ app.use('/', index);
 
 module.exports = app;
 
+
+var key = fs.readFileSync('selfsigned.key');
+var cert = fs.readFileSync('selfsigned.crt');
+var options = {
+  key: key,
+  cert: cert
+};
+
+
+http.createServer(app).listen(80);
+https.createServer(options, app).listen(443);
+
 // modelMain.readDataFromFile();
 // modelMain.summarizeData();
 
-app.listen(80);
+// app.listen(80);
