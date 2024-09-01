@@ -21,6 +21,7 @@ router.get('/feed1', ctrlMain.check_logged_In, ctrlMain.get_feed1);
 router.get('/feed2', ctrlMain.check_logged_In, ctrlMain.get_feed2);
 router.get('/overview', ctrlMain.check_logged_In, ctrlMain.get_overview);
 router.get('/joinus', ctrlMain.check_logged_In, ctrlMain.get_joinus);
+router.get('/party', ctrlMain.check_logged_In, ctrlMain.get_party);
 router.get('/about', ctrlMain.check_logged_In, ctrlMain.get_about);
 router.get('/member', ctrlMain.check_logged_In, ctrlMain.get_member);
 

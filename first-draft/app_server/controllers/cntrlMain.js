@@ -136,6 +136,10 @@ module.exports.get_joinus = function(req, res) {
     sendPage(projectFolerName + 'public/html/joinus.html', res);
 };
 
+module.exports.get_party = function(req, res) {
+    sendPage(projectFolerName + 'public/html/party.html', res);
+};
+
 module.exports.sendPage = sendPage;
 
 function sendPage(filename, res) {
