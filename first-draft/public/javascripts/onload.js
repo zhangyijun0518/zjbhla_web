@@ -92,7 +92,7 @@ function changeImg() {
         return;
     }
     imageNum++;
-    if (imageNum > 23) {
+    if (imageNum > 30) {
         imageNum = 1;
     }
     var img = document.getElementById("rollingImage");
