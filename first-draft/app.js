@@ -44,9 +44,12 @@ var options = {
 	key: key
 };
 
+var hostname = '0.0.0.0';
 
-http.createServer(app).listen(80);
-https.createServer(options, app).listen(443);
+http.createServer(app).listen(80, hostname, () => {
+	console.log(`start running web server....`);
+});
+https.createServer(options, app).listen(443, hostname);
 
 // modelMain.readDataFromFile();
 // modelMain.summarizeData();
