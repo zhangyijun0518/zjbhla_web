@@ -32,11 +32,16 @@ app.use('/', index);
 module.exports = app;
 
 
-var key = fs.readFileSync('selfsigned.key');
-var cert = fs.readFileSync('selfsigned.crt');
+//var key = fs.readFileSync('selfsigned.key');
+//var cert = fs.readFileSync('selfsigned.crt');
+//var options = {
+//  key: key,
+//  cert: cert
+//};
+
+var key = fs.readFileSync('sshkey.pem');
 var options = {
-  key: key,
-  cert: cert
+	key: key
 };
 
 
