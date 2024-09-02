@@ -146,7 +146,7 @@ function sendPage(filename, res) {
     var html = '';
     var readInterface = readline.createInterface({
         input: fs.createReadStream(filename),
-        output: process.stdout,
+       // output: process.stdout,
         console: false
     });
     //readInterface is async
