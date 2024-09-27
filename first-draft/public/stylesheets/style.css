@@ -365,6 +365,12 @@ table.univInfo td{
   text-align: center;
 }
 
+.footer-icon {
+	width: 15px;
+	height: 15px;
+}
+
+
 #dialogTab {
   float: right;
 }
